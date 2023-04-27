@@ -12,13 +12,13 @@ function start(){
     let band = validator.bandCard(numC);
 
     if (numC === ""){
-        output.innerHTML= "<h4 style='color: red;'> Digite o Numero do Cartão</h4>"
+        output.innerHTML= "<h4 style='color: white;'> Digite o Numero do Cartão</h4>"
     }
     else if(valid === true){
         output.innerHTML= cardBlock+band+"<h4 style='color: green;'> Cartão Válido</h4>"
     }
     else{
-        output.innerHTML= cardBlock+ "<h4 style='color: red;'>Cartão Inválido</h4>"
+        output.innerHTML= cardBlock+ "<h4 style='color: white;'>Cartão Inválido</h4>"
 
     }
 } 

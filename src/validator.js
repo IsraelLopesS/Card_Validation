@@ -24,14 +24,19 @@ const validator = {
 },
 
 block: function (card1){
-  return card1.replace(/\d(?=\d{4})/g,"#")
+  let x = card1.split(''); 
+  for (let i=0; i< x.length - 4; i++){
+    x[i] = "#";
+  }
+  let maskedCard = x.join('');
+  return maskedCard
 },
 
 bandCard: function (bandNum){
   var bandNum = bandNum.replace(/[^0-9]+/g, '');
 
   var cards = {
-      visa      : /^4[0-9]{12}(?:[0-9]{3})/,
+      visa     : /^4[0-9]{12}(?:[0-9]{3})/,
       mastercard : /^5[1-5][0-9]{14}/,
       diners    : /^3(?:0[0-5]|[68][0-9])[0-9]{11}/,
       amex      : /^3[47][0-9]{13}/,
